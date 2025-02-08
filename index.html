@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/1.png" type="image/x-icon">
+  <title>David D.S.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    .comment-form {
+      margin-top: 30px;
+    }
+    .comment-form input,
+    .comment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .comment-form button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .comment-form button:hover {
+      background-color: #218838;
+    }
+    .stars {
+      display: flex;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .star {
+      font-size: 24px;
+      color: #ccc;
+    }
+    .star.selected,
+    .star:hover {
+      color: #FFD700;
+    }
+    .comment {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .comment .author {
+      font-weight: bold;
+    }
+    .comment .timestamp {
+      font-size: 0.9em;
+      color: #555;
+    }
+    .comment .stars-display {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="navlist">
+      <li class="active"><a href="#home">Início</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </div>
+      
+  <div class="bx bx-menu" id="menu-icon"></div>
+  
+</nav>
+  
+
+  <main>
+    <section id="home" class="home">
+      <div class="home-presentation">
+        <h1 id="name">David</h1>
+        <h1 id="last-name">D.S.</h1>
+        <h3>Sua Empresa em <span><strong>|</strong>Destaque!!</span></h3>
+        <div class="button">
+          <a href="#projects" class="project-button">Projetos</a>
+          <a href="#contact" class="contact-button">Contato</a>
+        </div>
+      </div>
+      <img class="home-mac" src="./img/what-is-ensemble-programming.jpg" alt="laptop">
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="./img/1.png" alt="">
+      </div>
+     <div class="about-text">
+          <h2><span></span>Projetos</h2>
+          <p>
+            "Transformo ideias em sites modernos e responsivos. Especialista em WordPress e desenvolvimento front-end, crio soluções personalizadas para ajudar sua marca a se destacar online. Desde landing pages otimizadas até lojas virtuais completas, cada detalhe é pensado para oferecer design atraente e performance impecável. Vamos criar algo incrível juntos?"
+        
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Sites Criados Por Nós</h2>
+      <div class="portfolio-content">
+        <div class="row">
+          <img src="./img/Captura de Tela (84).png" alt="print pagina de login">
+          <div class="layer">
+            <p>Site de e-commerce</p>
+            <div class="site-github">
+              <a href="https://emporiodfibra.com.br/" target="_blank">
+                <i class='bx bx-link-external'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comments" class="comments">
+      <h2>Deixe Seu Comentário:</h2>
+      <div class="comment-form">
+        <input type="text" id="comment-name" placeholder="Seu nome" required />
+        <textarea id="comment-text" placeholder="Escreva seu comentário" rows="4" required></textarea>
+        <div class="stars" id="rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <button onclick="addComment()">Adicionar Comentário</button>
+      </div>
+      <div id="comment-section">
+        <h2>Comentários:</h2>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Faça Seu Orçamento Com a Gente!!</h2>
+      <div class="contact-icons">
+        <a href="https://www.instagram.com/davidsantozz/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="mailto:davidsantosw3@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+        <a href="https://discordapp.com/users/691374167337205775" target="_blank"><i class="bx bxl-discord"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <section class="end">
+    <p>David dos Santos 2025. Todos Direitos Reservados.</p>
+    <div class="top">
+      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+  </section>
+
+  <script>
+    let selectedRating = 0;
+    const adminPassword = "hk4(FM8i[X(>";
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      loadComments();
+      updateStarDisplay(selectedRating);
+    });
+  
+    document.querySelectorAll('.star').forEach(star => {
+      star.addEventListener('click', () => {
+        selectedRating = star.getAttribute('data-value');
+        updateStarDisplay(selectedRating);
+      });
+    });
+  
+    function updateStarDisplay(rating) {
+      document.querySelectorAll('.star').forEach(star => {
+        if (star.getAttribute('data-value') <= rating) {
+          star.classList.add('selected');
+        } else {
+          star.classList.remove('selected');
+        }
+      });
+    }
+  
+    function addComment() {
+      const name = document.getElementById('comment-name').value;
+      const comment = document.getElementById('comment-text').value;
+  
+      if (name && comment && selectedRating > 0) {
+        const timestamp = new Date().toLocaleString();
+        const newComment = {
+          name: name,
+          comment: comment,
+          rating: selectedRating,
+          timestamp: timestamp
+        };
+  
+        let comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.push(newComment);
+        localStorage.setItem('comments', JSON.stringify(comments));
+  
+        displayComment(newComment, comments.length - 1);
+  
+        document.getElementById('comment-name').value = '';
+        document.getElementById('comment-text').value = '';
+        updateStarDisplay(0);
+        selectedRating = 0;
+      } else {
+        alert('Por favor, preencha todos os campos e selecione uma avaliação.');
+      }
+    }
+  
+    function loadComments() {
+      const comments = JSON.parse(localStorage.getItem('comments')) || [];
+      const commentSection = document.getElementById('comment-section');
+      commentSection.innerHTML = '';  // Limpa para evitar duplicação
+  
+      comments.forEach((comment, index) => {
+        displayComment(comment, index);
+      });
+    }
+  
+    function displayComment(comment, index) {
+      const commentSection = document.getElementById('comment-section');
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+  
+      commentDiv.innerHTML = `
+        <p class="author">${comment.name} <span class="stars-display">${'★'.repeat(comment.rating)}</span></p>
+        <p class="timestamp">${comment.timestamp}</p>
+        <p>${comment.comment}</p>
+        <button onclick="confirmDelete(${index})">.</button>
+      `;
+  
+      commentSection.appendChild(commentDiv);
+    }
+  
+    function confirmDelete(index) {
+      const password = prompt("Digite a senha de administrador para excluir o comentário:");
+      if (password === adminPassword) {
+        deleteComment(index);
+      } else {
+        alert("Senha incorreta! Você não tem permissão para excluir este comentário.");
+      }
+    }
+  
+    function deleteComment(index) {
+      let comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.splice(index, 1);
+      localStorage.setItem('comments', JSON.stringify(comments));
+      loadComments();  // Recarrega os comentários
+    }
+  </script>
+  
+</body>
+</html>
